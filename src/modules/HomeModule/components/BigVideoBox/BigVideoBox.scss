@@ -1,0 +1,38 @@
+.outline {
+  color: black;
+}
+
+.outline-white {
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+.outline-first {
+  text-shadow: -1px -1px 0 #e7bf35, 1px -1px 0 #e7bf35, -1px 1px 0 #e7bf35,
+    1px 1px 0 #e7bf35;
+}
+
+.outline-second {
+  text-shadow: -1px -1px 0 #909090, 1px -1px 0 #909090, -1px 1px 0 #909090,
+    1px 1px 0 #909090;
+}
+
+.outline-third {
+  text-shadow: -1px -1px 0 #7a5235, 1px -1px 0 #7a5235, -1px 1px 0 #7a5235,
+    1px 1px 0 #7a5235;
+}
+
+.top-ten-box {
+  display: flex;
+  gap: 16px;
+
+  &__number {
+    font-size: 80px;
+    line-height: 80px;
+    margin: 0;
+
+    @include tablet {
+      font-size: 120px;
+      line-height: 120px;
+    }
+  }
+}

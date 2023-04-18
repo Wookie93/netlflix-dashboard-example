@@ -1,0 +1,80 @@
+.wrapper {
+  @include tablet {
+    margin-top: -70px;
+    z-index: 10;
+  }
+}
+
+.videoModal {
+  background-color: var(--color-dark-gray);
+  max-width: 360px;
+  border-radius: 16px;
+
+  &__image {
+    img {
+      border-radius: 16px 16px 0 0;
+    }
+  }
+
+  &__content {
+    padding: 16px;
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    margin-bottom: 16px;
+
+    .actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .more {
+      margin-left: auto;
+      cursor: pointer;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__episodeInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__progressBar {
+    position: relative;
+    height: 3px;
+    background-color: var(--color-light-gray);
+    border-radius: 444px;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 33%;
+      height: 3px;
+      background-color: var(--color-primary);
+      border-radius: 444px;
+    }
+  }
+}
+
+.currnet-episode {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: var(--desktop-font-xs);
+
+  .time {
+    color: var(--color-light-gray);
+  }
+}

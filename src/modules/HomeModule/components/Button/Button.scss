@@ -1,0 +1,56 @@
+.button-link {
+  text-decoration: none;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 16px;
+  font-weight: 600;
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 444px;
+  cursor: pointer;
+
+  @include tablet {
+    padding: 18px 40px;
+  }
+
+  img {
+    margin-right: 8px;
+  }
+
+  button {
+    border: none;
+    background-color: var(--color-white);
+  }
+
+  &-primary {
+    background-color: var(--color-white);
+
+    @include desktop {
+      transition: filter 0.2s linear;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
+    }
+  }
+  &-secondary {
+    background-color: var(--color-gray);
+    color: var(--color-white);
+
+    @include tablet {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(4px);
+    }
+
+    @include desktop {
+      transition: background 0.2s linear;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}

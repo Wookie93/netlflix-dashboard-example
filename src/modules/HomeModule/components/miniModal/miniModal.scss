@@ -1,0 +1,138 @@
+.videoModal {
+  position: absolute;
+  background-color: var(--color-black-gray);
+  max-width: 360px;
+  border-radius: 16px;
+  z-index: 100;
+  transform-origin: top;
+  transform: scale(0);
+
+  &.open {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    transform-origin: top;
+    transform: scale(1);
+
+    @-webkit-keyframes zoomIn {
+      0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+    @keyframes zoomIn {
+      0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__image {
+    img {
+      border-radius: 16px 16px 0 0;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 16px;
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    margin-bottom: 16px;
+
+    .actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .more {
+      margin-left: auto;
+      cursor: pointer;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__episodeInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__progressBar {
+    position: relative;
+    height: 3px;
+    background-color: var(--color-light-gray);
+    border-radius: 444px;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 33%;
+      height: 3px;
+      background-color: var(--color-primary);
+      border-radius: 444px;
+    }
+  }
+
+  &__top {
+    text-align: end;
+  }
+
+  &__closeBtn {
+    position: relative;
+    padding: 5px 10px;
+    margin: 10px;
+    color: #fff;
+    background-color: transparent;
+    border: 0.5px solid var(--color-white);
+    border-radius: 50%;
+    font-weight: 400;
+  }
+}
+
+.only-mobile {
+  display: block;
+
+  @include bigTablet {
+    display: none;
+  }
+}
+
+.currnet-episode {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: var(--desktop-font-xs);
+
+  .time {
+    color: var(--color-light-gray);
+  }
+}
+
+.ReactModal__Overlay {
+  position: absolute !important;
+  background-color: unset !important;
+}

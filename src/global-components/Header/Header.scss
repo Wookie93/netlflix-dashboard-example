@@ -1,0 +1,30 @@
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 104px;
+  margin: auto;
+  z-index: 100;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+
+  @include tablet {
+    height: 231px;
+  }
+
+  &__innerwrap {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    max-width: 1440px;
+    padding: 0 16px;
+    margin: auto;
+
+    @include tablet {
+      padding: 0 40px;
+    }
+
+    @include desktop {
+      padding: 0 64px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.like-it-tooltip {
+  position: absolute;
+  top: -3px;
+  left: -43px;
+  display: flex;
+  gap: 4px;
+  padding: 4px 8px;
+  background-color: var(--color-dark-gray);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.24);
+  border-radius: 444px;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.2s linear;
+  z-index: -10;
+
+  &.visible {
+    transform: scaleX(1);
+    z-index: 99;
+  }
+
+  .action-btn {
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: border-color 0.2s linear;
+
+    &:hover {
+      border-color: var(--color-light-gray);
+    }
+
+    &__innerwrap {
+      height: 14px;
+    }
+  }
+
+  .action-btn__tooltip {
+    top: -45px;
+  }
+}

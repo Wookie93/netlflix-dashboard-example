@@ -1,0 +1,45 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import 'styles/normalize.scss';
+@import 'styles/root.scss';
+@import 'styles/mixins.scss';
+@import 'styles/custom-slider.scss';
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: var(--mobile-font-xl);
+  font-weight: 600;
+  @include tablet {
+    font-size: var(--desktop-font-xl);
+  }
+}
+
+p,
+a {
+  font-size: var(--mobile-font-m);
+  font-weight: 500;
+  @include tablet {
+    font-size: var(--desktop-font-m);
+  }
+}
+
+a {
+  text-decoration: underline;
+  color: var(--color-white);
+  transition: color 0.2s linear;
+
+  &:hover {
+    color: var(--color-light-gray);
+  }
+}
+
+.radius {
+  border-radius: 14px;
+}
