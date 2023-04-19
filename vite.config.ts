@@ -13,6 +13,7 @@ const resolve = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/netlflix-dashboard-example/',
   css: {
     devSourcemap: true,
     preprocessorOptions: {
