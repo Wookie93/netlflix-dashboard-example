@@ -16,15 +16,15 @@ const Hero: React.FC = () => {
         <div className="hero__title">
           <picture>
             <source
-              srcSet="src/assets/images/hero/wen-title.png"
+              srcSet="assets/images/hero/wen-title.png"
               media="(max-width: 680px)"
             />
             <source
-              srcSet="src/assets/images/hero/wen-title-tablet.png"
+              srcSet="assets/images/hero/wen-title-tablet.png"
               media="(max-width: 960px)"
             />
             <img
-              src="src/assets/images/hero/wen-title-desktop.png"
+              src="assets/images/hero/wen-title-desktop.png"
               alt="hero image"
               className="radius"
             />
