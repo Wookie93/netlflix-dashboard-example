@@ -11,7 +11,7 @@ const ActionButtonsWrapper = () => {
       <div className="actions">
         <ActionButton ariaLabel="play">
           <img
-            src="src/assets/images/icons/play-small.png"
+            src="assets/images/icons/play-small.png"
             width="32"
             height="32"
             alt=""
@@ -19,7 +19,7 @@ const ActionButtonsWrapper = () => {
         </ActionButton>
         <ActionButton tooltip="Dodaj do mojej listy" ariaLabel="add to list">
           <img
-            src="src/assets/images/icons/add.png"
+            src="assets/images/icons/add.png"
             alt=""
             width="32"
             height="32"
@@ -31,7 +31,7 @@ const ActionButtonsWrapper = () => {
         >
           <ActionButton ariaLabel="Like it">
             <img
-              src="src/assets/images/icons/like-btn.png"
+              src="assets/images/icons/like-btn.png"
               alt=""
               width="32"
               height="32"
@@ -45,7 +45,7 @@ const ActionButtonsWrapper = () => {
       </div>
       <div className="more">
         <img
-          src="src/assets/images/icons/arrow-down-small.png"
+          src="assets/images/icons/arrow-down-small.png"
           alt=""
           width="32"
           height="32"

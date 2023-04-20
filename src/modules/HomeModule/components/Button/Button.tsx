@@ -21,7 +21,7 @@ const Button = ({ dataType = '', text }: any) => {
       return (
         <a href="#" className="button-link">
           <button className="button button-primary play">
-            <img src="src/assets/images/icons/play.png" alt="play-info" />
+            <img src="assets/images/icons/play.png" alt="play-info" />
             Odtwórz
           </button>
         </a>
@@ -30,10 +30,7 @@ const Button = ({ dataType = '', text }: any) => {
       return (
         <a href="#" className="button-link">
           <button className="button button-secondary moreInfo">
-            <img
-              src="src/assets/images/icons/info-circle.png"
-              alt="more-info"
-            />
+            <img src="assets/images/icons/info-circle.png" alt="more-info" />
             Więcej informacji
           </button>
         </a>

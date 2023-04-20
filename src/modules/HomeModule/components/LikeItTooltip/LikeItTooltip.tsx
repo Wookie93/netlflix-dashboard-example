@@ -16,23 +16,18 @@ const LikeItTooltip = ({ isvisible, onMouseLeave }: Props) => {
     >
       <ActionButton tooltip="To nie dla mnie" ariaLabel="Not like it">
         <img
-          src="src/assets/images/icons/not-like.png"
+          src="assets/images/icons/not-like.png"
           alt=""
           width="14"
           height="14"
         />
       </ActionButton>
       <ActionButton tooltip="Podoba mi się" ariaLabel="Like it">
-        <img
-          src="src/assets/images/icons/like.png"
-          alt=""
-          width="14"
-          height="14"
-        />
+        <img src="assets/images/icons/like.png" alt="" width="14" height="14" />
       </ActionButton>
       <ActionButton tooltip="Uwielbiam to" ariaLabel="I love it">
         <img
-          src="src/assets/images/icons/heart.png"
+          src="assets/images/icons/heart.png"
           alt=""
           width="14"
           height="14"

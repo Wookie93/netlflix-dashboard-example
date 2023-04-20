@@ -3,13 +3,12 @@
   max-width: 1440px;
   margin: auto;
   height: 615px;
-  background: url('/src/assets/images/hero/wendsday-mobile.jpg') no-repeat top
+  background: url('/assets/images/hero/wendsday-mobile.jpg') no-repeat top
     center;
   background-size: 100% auto;
 
   @media screen and (min-width: 480px) {
-    background: url('/src/assets/images/hero/hero_tablet.jpg') no-repeat top
-      center;
+    background: url('/assets/images/hero/hero_tablet.jpg') no-repeat top center;
   }
 
   @include tablet {
@@ -18,8 +17,7 @@
   }
 
   @include bigTablet {
-    background: url('/src/assets/images/hero/hero_desktop.jpg') no-repeat top
-      center;
+    background: url('/assets/images/hero/hero_desktop.jpg') no-repeat top center;
     height: 810px;
   }
 

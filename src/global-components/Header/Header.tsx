@@ -7,7 +7,7 @@ const Header = () => {
       <div className="header__innerwrap">
         <div className="header__logo-wrap">
           <img
-            src="src/assets/images/logo/logo.png"
+            src="assets/images/logo/logo.png"
             alt="netflix"
             width={52}
             height={16}

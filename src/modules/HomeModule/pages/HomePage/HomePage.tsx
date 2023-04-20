@@ -53,8 +53,8 @@ export const HomePage: React.FC = () => {
 
   React.useEffect(() => {
     (async () => {
-      const topData = await fetchJsonData('src/assets/data/top.json');
-      const popularData = await fetchJsonData('src/assets/data/small.json');
+      const topData = await fetchJsonData('assets/data/top.json');
+      const popularData = await fetchJsonData('assets/data/small.json');
       if (topData && popularData) {
         setTopTenMovies(topData);
         setPopularMovies(popularData);
