@@ -23,16 +23,22 @@
 
 .top-ten-box {
   display: flex;
-  gap: 16px;
+  gap: 15px;
 
-  &__number {
+  & &__number {
+    width: 45px;
     font-size: 80px;
-    line-height: 80px;
+    line-height: 60px;
     margin: 0;
+  }
 
-    @include tablet {
+  @include tablet {
+    gap: 24px;
+
+    & &__number {
+      width: 69px;
       font-size: 120px;
-      line-height: 120px;
+      line-height: 91px;
     }
   }
 }

@@ -25,5 +25,3 @@ const isOffTheScreen = function (rect: Props) {
 };
 
 export default isOffTheScreen;
-
-//// sprawdzać modal o ile się wystaje i go wtedy przesuwać

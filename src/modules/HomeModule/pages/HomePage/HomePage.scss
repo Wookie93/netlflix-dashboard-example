@@ -1,6 +1,12 @@
 .wrapper {
+  margin-top: -16px;
+
   @include tablet {
-    margin-top: -70px;
+    margin-top: -107px;
+  }
+
+  @include desktop {
+    margin-top: -128px;
     z-index: 10;
   }
 }
@@ -10,17 +16,17 @@
   max-width: 360px;
   border-radius: 16px;
 
-  &__image {
+  & &__image {
     img {
       border-radius: 16px 16px 0 0;
     }
   }
 
-  &__content {
+  & &__content {
     padding: 16px;
   }
 
-  &__btn-wrapper {
+  & &__btn-wrapper {
     display: flex;
     margin-bottom: 16px;
 
@@ -43,12 +49,12 @@
     }
   }
 
-  &__episodeInfo {
+  & &__episodeInfo {
     display: flex;
     flex-direction: column;
   }
 
-  &__progressBar {
+  & &__progressBar {
     position: relative;
     height: 3px;
     background-color: var(--color-light-gray);

@@ -5,6 +5,7 @@ import BigVideoBox from '../BigVideoBox/BigVideoBox';
 // styles
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './TopTenCarosuel.scss';
 
 interface Props {
   title: string;
@@ -25,7 +26,7 @@ const TopTenCarosuel = ({ title, content, handleOpenModal }: Props) => {
   const [timeout, setTimeoutID] = React.useState(0);
   const settings = {
     infinite: false,
-    slidesToShow: 4.25,
+    slidesToShow: 4.3,
     slidesToScroll: 1,
     speed: 500,
     arrows: true,
@@ -49,7 +50,15 @@ const TopTenCarosuel = ({ title, content, handleOpenModal }: Props) => {
       {
         breakpoint: 540,
         settings: {
-          slidesToShow: 1.5,
+          slidesToShow: 1.55,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 355,
+        settings: {
+          slidesToShow: 1.25,
           slidesToScroll: 1,
           arrows: false,
         },
@@ -71,12 +80,9 @@ const TopTenCarosuel = ({ title, content, handleOpenModal }: Props) => {
   };
 
   return (
-    <div className="slider">
+    <div className="slider top-ten-slider">
       <div className="slider__boxhead">
         <h2 className="slider__title">{title}</h2>
-        <a href="#" className="slider__link">
-          Zobacz wszystkie {'>'}
-        </a>
       </div>
       <Slider {...settings}>
         {content.map((box: boxProps, index: number) => (

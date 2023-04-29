@@ -26,7 +26,7 @@ const SmallCarousel = ({ title, content, handleOpenModal }: Props) => {
   const settings = {
     infinite: false,
     speed: 500,
-    slidesToShow: 5.25,
+    slidesToShow: 5.2,
     slidesToScroll: 1,
     arrows: true,
     responsive: [
@@ -49,7 +49,7 @@ const SmallCarousel = ({ title, content, handleOpenModal }: Props) => {
       {
         breakpoint: 960,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2.95,
           slidesToScroll: 1,
           arrows: true,
         },
@@ -65,7 +65,15 @@ const SmallCarousel = ({ title, content, handleOpenModal }: Props) => {
       {
         breakpoint: 560,
         settings: {
-          slidesToShow: 1.5,
+          slidesToShow: 1.53,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 355,
+        settings: {
+          slidesToShow: 1.15,
           slidesToScroll: 1,
           arrows: false,
         },

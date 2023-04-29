@@ -20,6 +20,8 @@
 .slick-next,
 .slick-prev {
   z-index: 10;
+  top: 69px;
+
   &::before {
     content: '';
     display: block;
@@ -36,40 +38,56 @@
   }
 }
 .slick-next {
-  right: 48px;
+  right: 65px;
 }
 
 .slider {
   margin-left: 16px;
-  margin-bottom: 40px;
-
-  @include tablet {
-    margin-left: 40px;
-  }
-
-  @include desktop {
-    margin-left: 56px;
-  }
+  margin-bottom: 17px;
 
   &__boxhead {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 16px;
-
-    @include tablet {
-      margin-right: 40px;
-    }
-
-    h2 {
-      margin-bottom: 16px;
-      @include tablet {
-        margin-bottom: 32px;
-      }
-    }
+    margin-right: 4px;
+    margin-bottom: -1px;
   }
 
   &__title {
-    width: 50%;
+    width: 38%;
+  }
+
+  &__link {
+    padding-top: 14px;
+  }
+
+  @include tablet {
+    margin-left: 40px;
+    margin-bottom: 37px;
+
+    &__boxhead {
+      margin-right: 39px;
+      letter-spacing: -0.7px;
+      margin-bottom: 11px;
+    }
+
+    &__title {
+      width: 50%;
+    }
+
+    &__link {
+      padding-top: 7px;
+    }
+  }
+
+  @include desktop {
+    margin-left: 56px;
+    margin-bottom: 36px;
+
+    &__boxhead {
+      margin-right: 54px;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
   }
 }

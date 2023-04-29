@@ -39,18 +39,22 @@
     }
   }
 
-  &__image {
+  & &__image {
     img {
       border-radius: 16px 16px 0 0;
     }
+
+    iframe {
+      width: 360px;
+    }
   }
 
-  &__content {
+  & &__content {
     position: relative;
     padding: 16px;
   }
 
-  &__btn-wrapper {
+  & &__btn-wrapper {
     display: flex;
     margin-bottom: 16px;
 
@@ -73,12 +77,12 @@
     }
   }
 
-  &__episodeInfo {
+  & &__episodeInfo {
     display: flex;
     flex-direction: column;
   }
 
-  &__progressBar {
+  & &__progressBar {
     position: relative;
     height: 3px;
     background-color: var(--color-light-gray);
@@ -97,11 +101,11 @@
     }
   }
 
-  &__top {
+  & &__top {
     text-align: end;
   }
 
-  &__closeBtn {
+  & &__closeBtn {
     position: relative;
     padding: 5px 10px;
     margin: 10px;
@@ -110,6 +114,22 @@
     border: 0.5px solid var(--color-white);
     border-radius: 50%;
     font-weight: 400;
+  }
+
+  @media only screen and (max-width: 359px) {
+    & &__image {
+      iframe {
+        width: 320px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 325px) {
+    & &__image {
+      iframe {
+        width: 300px;
+      }
+    }
   }
 }
 
@@ -135,4 +155,14 @@
 .ReactModal__Overlay {
   position: absolute !important;
   background-color: unset !important;
+}
+
+.ReactModal__Content {
+  @media only screen and (max-width: 359px) {
+    left: 12.5% !important;
+  }
+
+  @media only screen and (max-width: 325px) {
+    left: 17.5% !important;
+  }
 }

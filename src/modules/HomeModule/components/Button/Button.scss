@@ -5,19 +5,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 18px 16px;
+  padding: 18px 20px;
   font-weight: 600;
   background-color: var(--color-white);
   border: none;
   border-radius: 444px;
   cursor: pointer;
-
-  @include tablet {
-    padding: 18px 40px;
-  }
+  letter-spacing: 0.7px;
 
   img {
-    margin-right: 8px;
+    margin-right: 5px;
   }
 
   button {
@@ -27,25 +24,45 @@
 
   &-primary {
     background-color: var(--color-white);
+  }
+  &-secondary {
+    background-color: var(--color-gray);
+    color: var(--color-white);
+  }
 
-    @include desktop {
+  /// small mobile devices
+  @media only screen and (max-width: 325px) {
+    font-size: var(--mobile-font-s);
+    padding: 16px 10px;
+  }
+
+  /// tablet devices
+  @include tablet {
+    padding: 19px 40px;
+    letter-spacing: -0.5px;
+
+    img {
+      margin-right: 9px;
+    }
+
+    &-secondary {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(4px);
+    }
+  }
+
+  /// desktop devices
+  @include desktop {
+    padding: 20px 41px;
+
+    &-primary {
       transition: filter 0.2s linear;
 
       &:hover {
         filter: brightness(0.7);
       }
     }
-  }
-  &-secondary {
-    background-color: var(--color-gray);
-    color: var(--color-white);
-
-    @include tablet {
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(4px);
-    }
-
-    @include desktop {
+    &-secondary {
       transition: background 0.2s linear;
 
       &:hover {

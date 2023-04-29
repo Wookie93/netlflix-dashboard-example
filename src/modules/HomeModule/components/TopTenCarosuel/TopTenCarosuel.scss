@@ -1,0 +1,28 @@
+.slider.top-ten-slider {
+  margin-bottom: 22px;
+
+  .slider__boxhead {
+    margin-bottom: -1px;
+  }
+
+  .slick-next,
+  .slick-prev {
+    top: 100px;
+  }
+
+  @include tablet {
+    margin-bottom: 45px;
+
+    .slider__boxhead {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include tablet {
+    .slider__boxhead {
+      .slider__title {
+        letter-spacing: -0.6px;
+      }
+    }
+  }
+}

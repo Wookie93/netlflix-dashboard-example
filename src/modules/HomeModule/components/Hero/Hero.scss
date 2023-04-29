@@ -3,26 +3,126 @@
   max-width: 1440px;
   margin: auto;
   height: 615px;
-  background: url('/assets/images/hero/wendsday-mobile.jpg') no-repeat top
-    center;
-  background-size: 100% auto;
+  background: url('/assets/images/hero/wendsday-mobile.jpg') no-repeat left top;
+  background-size: 100vw;
 
-  @media screen and (min-width: 480px) {
-    background: url('/assets/images/hero/hero_tablet.jpg') no-repeat top center;
+  & &__markers {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .top-ten {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      font-size: 8px;
+      text-transform: uppercase;
+      background-color: var(--color-primary);
+      border-radius: 10.5px;
+
+      .ten {
+        font-size: 12px;
+      }
+    }
+
+    .today-popular {
+      font-weight: 700;
+      letter-spacing: -0.4px;
+    }
   }
 
+  & &__title {
+    margin: 14px 0;
+  }
+
+  & &__content {
+    position: absolute;
+    bottom: 39px;
+    margin: 0 16px;
+  }
+
+  & &__description {
+    font-size: var(--mobile-font-m);
+    font-weight: 500;
+    line-height: 17px;
+  }
+
+  & &__btn-wrap {
+    display: flex;
+    gap: 4px;
+    margin-top: 40px;
+  }
+
+  /// small mobile styles
+  @media screen and (min-width: 480px) {
+    background: url('/assets/images/hero/hero_tablet.jpg') no-repeat left top;
+  }
+
+  ////// tablet styles
   @include tablet {
     height: 730px;
-    background-size: auto 100vw;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 150px;
+      background: rgb(2, 0, 36);
+      background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 0) 0%,
+        rgba(1, 0, 13, 0.6713060224089635) 65%,
+        rgba(0, 0, 0, 1) 100%
+      );
+    }
+
+    & &__markers {
+      gap: 17px;
+
+      .top-ten {
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+
+        .ten {
+          font-size: 16px;
+        }
+      }
+      .today-popular {
+        font-size: var(--desktop-font-xl);
+        letter-spacing: -0.7px;
+      }
+    }
+
+    & &__title {
+      margin: 25px 0 20px 0;
+    }
+    & &__content {
+      bottom: 23.7%;
+      margin: 0 40px;
+    }
+    & &__description {
+      width: 555px;
+      margin-bottom: 40px;
+      font-size: var(--desktop-font-l);
+      line-height: 118%;
+    }
+    & &__btn-wrap {
+      gap: 13px;
+      margin-top: 0;
+    }
   }
 
+  /// larger tablet styles
   @include bigTablet {
-    background: url('/assets/images/hero/hero_desktop.jpg') no-repeat top center;
+    background: url('/assets/images/hero/hero_desktop.jpg') no-repeat left top;
     height: 810px;
-  }
-
-  &::before {
-    @include bigDesktop {
+    &::before {
       content: '';
       position: absolute;
       right: 0;
@@ -38,104 +138,23 @@
         rgba(0, 0, 0, 1) 100%
       );
     }
-  }
 
-  &::after {
-    @include tablet {
-      content: '';
-      position: absolute;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      height: 150px;
-      background: rgb(2, 0, 36);
-      background: linear-gradient(
-        180deg,
-        rgba(2, 0, 36, 0) 0%,
-        rgba(1, 0, 13, 0.6713060224089635) 65%,
-        rgba(0, 0, 0, 1) 100%
-      );
+    & &__content {
+      margin: 0 62px;
     }
   }
 
-  &__markers {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-
-    .top-ten {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      font-size: 8px;
-      text-transform: uppercase;
-      background-color: var(--color-primary);
-      border-radius: 9.6px;
-
-      @include tablet {
-        width: 40px;
-        height: 40px;
-        font-size: 10px;
-      }
-
-      .ten {
-        font-size: 12px;
-        @include tablet {
-          font-size: 16px;
-        }
-      }
+  /// desktop styles
+  @include desktop {
+    & &__markers {
+      gap: 20px;
     }
-
-    .today-popular {
-      font-weight: 700;
-
-      @include tablet {
-        font-size: var(--desktop-font-xl);
-      }
+    & &__title {
+      margin: 22px 0 20px 0;
     }
-  }
-
-  &__title {
-    margin: 16px 0;
-    @include tablet {
-      margin: 24px 0;
+    & &__description {
+      width: 555px;
+      letter-spacing: -0.36px;
     }
-  }
-
-  &__content {
-    position: absolute;
-    bottom: 40px;
-    margin: 0 16px;
-
-    @include tablet {
-      bottom: 22%;
-      margin: 0 40px;
-    }
-
-    @include bigTablet {
-      margin: 0 56px;
-    }
-  }
-
-  &__description {
-    font-size: var(--mobile-font-m);
-    font-weight: 500;
-    line-height: 17px;
-
-    @include tablet {
-      width: 550px;
-      margin-bottom: 40px;
-      font-size: var(--desktop-font-l);
-      line-height: 120%;
-    }
-  }
-
-  &__btn-wrap {
-    display: flex;
-    gap: 12px;
-    margin-top: 24px;
   }
 }
