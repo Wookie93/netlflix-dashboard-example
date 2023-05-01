@@ -57,13 +57,13 @@ const SmallCarousel = ({ title, content, handleOpenModal }: Props) => {
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 2.5,
+          slidesToShow: 2.25,
           slidesToScroll: 1,
           arrows: true,
         },
       },
       {
-        breakpoint: 560,
+        breakpoint: 555,
         settings: {
           slidesToShow: 1.53,
           slidesToScroll: 1,
