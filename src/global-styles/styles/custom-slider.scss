@@ -17,6 +17,7 @@
     }
   }
 }
+
 .slick-next,
 .slick-prev {
   z-index: 10;
@@ -29,6 +30,10 @@
     height: 48px;
     background: url('/assets/images/icons/arrow.png') no-repeat center;
   }
+
+  @include tablet {
+    top: 67px;
+  }
 }
 
 .slick-prev {
@@ -39,27 +44,36 @@
 }
 .slick-next {
   right: 50px;
+
+  @include tablet {
+    right: 63px;
+  }
 }
 
 .slider {
   margin-left: 16px;
-  margin-bottom: 17px;
+  margin-bottom: 18.5px;
 
   &__boxhead {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 8px;
-    margin-bottom: -1px;
+    margin-right: 17px;
+    margin-bottom: -2px;
   }
 
   &__title {
     width: 38%;
+    line-height: 115%;
+    padding-right: 3px;
   }
 
   &__link {
-    padding-top: 16px;
-    letter-spacing: -0.4px;
+    padding-top: 18px;
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: end;
+    gap: 3px;
   }
 
   @include tablet {
@@ -67,8 +81,7 @@
     margin-bottom: 37px;
 
     &__boxhead {
-      margin-right: 39px;
-      letter-spacing: -0.7px;
+      margin-right: 41px;
       margin-bottom: 11px;
     }
 
@@ -78,7 +91,13 @@
 
     &__link {
       padding-top: 7px;
-      letter-spacing: 0;
+      letter-spacing: -0.4px;
+      align-items: center;
+      gap: 8px;
+
+      img {
+        width: 16px;
+      }
     }
   }
 
@@ -87,8 +106,12 @@
     margin-bottom: 36px;
 
     &__boxhead {
-      margin-right: 54px;
+      margin-right: 56px;
       margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    &__link {
       letter-spacing: -0.5px;
     }
   }

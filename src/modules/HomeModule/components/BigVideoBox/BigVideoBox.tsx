@@ -33,7 +33,7 @@ const BigVideoBox = ({
   const colorOfNumber = getPositionClass(position);
 
   return (
-    <div className="top-ten-box">
+    <div className={`top-ten-box box-${position + 1}`}>
       <p className={`top-ten-box__number ${colorOfNumber}`}>{position + 1}</p>
       <div className="top-ten-box__image" {...props}>
         <picture>

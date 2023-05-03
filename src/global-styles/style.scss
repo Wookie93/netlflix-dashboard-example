@@ -17,7 +17,7 @@ body {
 h2 {
   font-size: var(--mobile-font-xl);
   font-weight: 600;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.53px;
 
   @include tablet {
     font-size: var(--desktop-font-xl);

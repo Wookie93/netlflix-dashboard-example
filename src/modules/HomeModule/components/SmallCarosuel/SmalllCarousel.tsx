@@ -26,10 +26,18 @@ const SmallCarousel = ({ title, content, handleOpenModal }: Props) => {
   const settings = {
     infinite: false,
     speed: 500,
-    slidesToShow: 5.2,
+    slidesToShow: 5.26,
     slidesToScroll: 1,
     arrows: true,
     responsive: [
+      {
+        breakpoint: 1441,
+        settings: {
+          slidesToShow: 5.25,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
       {
         breakpoint: 1366,
         settings: {
@@ -49,7 +57,7 @@ const SmallCarousel = ({ title, content, handleOpenModal }: Props) => {
       {
         breakpoint: 960,
         settings: {
-          slidesToShow: 2.95,
+          slidesToShow: 3,
           slidesToScroll: 1,
           arrows: true,
         },
@@ -66,6 +74,14 @@ const SmallCarousel = ({ title, content, handleOpenModal }: Props) => {
         breakpoint: 555,
         settings: {
           slidesToShow: 1.53,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 380,
+        settings: {
+          slidesToShow: 1.59,
           slidesToScroll: 1,
           arrows: false,
         },
@@ -99,7 +115,8 @@ const SmallCarousel = ({ title, content, handleOpenModal }: Props) => {
       <div className="slider__boxhead">
         <h2 className="slider__title">{title}</h2>
         <a href="#" className="slider__link">
-          Zobacz wszystkie {'>'}
+          Zobacz wszystkie
+          <img src="assets/images/icons/arrow-right.png" alt="arrow" />
         </a>
       </div>
       <Slider {...settings}>

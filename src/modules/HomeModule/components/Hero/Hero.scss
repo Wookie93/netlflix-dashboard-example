@@ -35,12 +35,12 @@
   }
 
   & &__title {
-    margin: 14px 0;
+    margin: 13px 0;
   }
 
   & &__content {
     position: absolute;
-    bottom: 39px;
+    bottom: 56px;
     margin: 0 16px;
   }
 
@@ -53,7 +53,7 @@
   & &__btn-wrap {
     display: flex;
     gap: 10px;
-    margin-top: 40px;
+    margin-top: 25px;
   }
 
   /// small mobile styles
@@ -108,7 +108,7 @@
     }
     & &__description {
       width: 555px;
-      margin-bottom: 40px;
+      margin-bottom: 42px;
       font-size: var(--desktop-font-l);
       line-height: 118%;
     }
@@ -147,14 +147,23 @@
   /// desktop styles
   @include desktop {
     & &__markers {
-      gap: 20px;
+      gap: 17px;
+      margin-left: 2px;
+      .today-popular {
+        letter-spacing: -0.75px;
+      }
     }
     & &__title {
-      margin: 22px 0 20px 0;
+      margin: 23px 0 20px 0;
     }
     & &__description {
-      width: 555px;
+      width: 549px;
       letter-spacing: -0.36px;
+      padding-left: 1px;
+      margin-bottom: 40px;
     }
+  }
+  & &__btn-wrap {
+    gap: 15px;
   }
 }

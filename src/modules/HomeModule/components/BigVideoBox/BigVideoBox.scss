@@ -23,12 +23,12 @@
 
 .top-ten-box {
   display: flex;
-  gap: 15px;
+  gap: 13px;
 
   & &__number {
     width: 45px;
     font-size: 80px;
-    line-height: 60px;
+    line-height: 59px;
     margin: 0;
   }
 
@@ -38,7 +38,24 @@
     & &__number {
       width: 69px;
       font-size: 120px;
-      line-height: 91px;
+      line-height: 89px;
     }
   }
 }
+
+// .box-2 {
+//   gap: 17px;
+
+//   @include tablet {
+//     gap: 24px;
+//   }
+//   @include desktop {
+//     gap: 23px;
+//   }
+// }
+
+// .box-3 {
+//   @include tablet {
+//     gap: 42px;
+//   }
+// }

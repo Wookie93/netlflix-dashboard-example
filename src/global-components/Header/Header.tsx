@@ -9,7 +9,7 @@ const Header = () => {
           <img
             src="assets/images/logo/logo.png"
             alt="netflix"
-            width={52}
+            width={57}
             height={16}
           />
         </div>

@@ -26,11 +26,19 @@ const TopTenCarosuel = ({ title, content, handleOpenModal }: Props) => {
   const [timeout, setTimeoutID] = React.useState(0);
   const settings = {
     infinite: false,
-    slidesToShow: 4.3,
+    slidesToShow: 4.29,
     slidesToScroll: 1,
     speed: 500,
     arrows: true,
     responsive: [
+      {
+        breakpoint: 1441,
+        settings: {
+          slidesToShow: 3.5,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
       {
         breakpoint: 1200,
         settings: {
@@ -48,9 +56,25 @@ const TopTenCarosuel = ({ title, content, handleOpenModal }: Props) => {
         },
       },
       {
+        breakpoint: 840,
+        settings: {
+          slidesToShow: 2.56,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+      {
         breakpoint: 540,
         settings: {
           slidesToShow: 1.55,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 380,
+        settings: {
+          slidesToShow: 1.62,
           slidesToScroll: 1,
           arrows: false,
         },
@@ -74,6 +98,8 @@ const TopTenCarosuel = ({ title, content, handleOpenModal }: Props) => {
     setTimeoutID(timeoutID);
   };
 
+  const titleArr = title.split('/');
+
   const handleMouseLeave = () => {
     clearTimeout(timeout);
     setTimeoutID(0);
@@ -82,7 +108,10 @@ const TopTenCarosuel = ({ title, content, handleOpenModal }: Props) => {
   return (
     <div className="slider top-ten-slider">
       <div className="slider__boxhead">
-        <h2 className="slider__title">{title}</h2>
+        <h2 className="slider__title">
+          <span>{titleArr[0]}</span>
+          <span>{titleArr[1]}</span>
+        </h2>
       </div>
       <Slider {...settings}>
         {content.map((box: boxProps, index: number) => (
